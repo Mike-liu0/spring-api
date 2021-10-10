@@ -26,13 +26,13 @@ public class DemoApplication {
 	}
 
 	// Add the controller.
-//	@RestController
-//	class HelloWorldController {
-//		@GetMapping("/")
-//		public String hello() {
-//			return "hello world! aasaa";
-//		}
-//	}
+	@RestController
+	class HelloWorldController {
+		@GetMapping("/hello")
+		public String hello() {
+			return "hello world! test";
+		}
+	}
 
 	@RestController
 	class UserController {

@@ -60,10 +60,10 @@
 			<plugin>
 				<groupId>com.google.cloud.tools</groupId>
 				<artifactId>appengine-maven-plugin</artifactId>
-				<version>2.1.0</version>
+				<version>2.2.0</version>
 				<configuration>
-					<version>GCLOUD_CONFIG</version>
-					<projectId>demo-project</projectId>
+					<version>1</version>
+					<projectId>GCLOUD_CONFIG</projectId>
 				</configuration>
 			</plugin>
 		</plugins>

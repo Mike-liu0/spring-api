@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class User {
-    private String id;
+    private double id;
     private String name;
     private double lat;
     private double lng;
@@ -12,7 +12,7 @@ public class User {
     public User() {
     }
 
-    public User(String id, String name, double lat, double lng) {
+    public User(double id, String name, double lat, double lng) {
         this.id = id;
         this.name = name;
         this.lat = lat;
@@ -47,6 +47,14 @@ public class User {
 
     public void setLng(double lng) {
         this.lng = lng;
+    }
+
+    public double getId() {
+        return id;
+    }
+
+    public void setId(double id) {
+        this.id = id;
     }
 
     @Override

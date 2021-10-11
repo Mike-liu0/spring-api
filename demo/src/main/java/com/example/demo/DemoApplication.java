@@ -25,35 +25,5 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	// Add the controller.
-	@RestController
-	class HelloWorldController {
-		@GetMapping("/hello")
-		public String hello() {
-			return "hello world! test";
-		}
-	}
-
-	@RestController
-	class UserController {
-
-		@Autowired
-		FirebaseInitialize db;
-
-
-		@GetMapping("/")
-		public List<User> getUsers() throws ExecutionException, InterruptedException {
-			List<User> userList = new ArrayList<>();
-			CollectionReference users = db.getFirebase().collection("users");
-			ApiFuture<QuerySnapshot> query = users.get();
-			for(DocumentSnapshot doc: query.get().getDocuments()){
-				User stu = doc.toObject(User.class);
-				userList.add(stu);
-			}
-			return userList;
-
-		}
-	}
-
 
 }
